@@ -1,0 +1,31 @@
+.btn, .btn-primary {
+        background: #07a31f;
+        background-color: #07a31f;
+        border: 0 solid #e5e7eb;
+        border-radius: 40px;
+        cursor: pointer;
+        &:disabled{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-label{
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        &:hover{
+            background-color: #05b01f;
+            background: #05b01f;
+        }
+
+        @media (min-width: 1024px) {
+            padding-left: 7rem;
+            padding-right: 7rem;
+        }
+
+        @media (min-width: 768px) {
+            padding: 1rem 7rem;
+        }
+}   
