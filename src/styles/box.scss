@@ -1,3 +1,20 @@
 m-auto{
     margin: auto;
 }
+
+.card{
+    width: 750px;
+    max-width: 750px;
+    background: #ffffff;
+    border-radius: 20px;
+    margin:0 auto;
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        width: 70%;
+    }
+    @media only screen and (min-width: 591px) and (max-width: 767px){
+        width: 85%;
+    }
+    @media (max-width: 590px) {
+        width: 93%;
+    }
+}

@@ -6,14 +6,14 @@ import { BUTTON_TYPES } from './constant';
 import './button.scss';
 
 const Button = (props) => {
-    const {type, label, icon, btnClassNames} = props;
+    const {type, label, icon, btnClassNames, onClick} = props;
 
     const btnClass = useMemo(() => {
         return getClassNameBasedOnClass(type);
     }, [type])
     
   return (
-    <button className={classNames(btnClass, {[btnClassNames]: btnClassNames?.length})}>
+    <button onClick={onClick} className={classNames(btnClass, {[btnClassNames]: btnClassNames?.length})}>
         <span className='btn-label'>
             {label}
         </span>
@@ -33,6 +33,7 @@ Button.propTypes = {
     label: PropTypes.string.isRequired,
     icon: PropTypes.object,
     btnClassNames: PropTypes.string,
+    onClick: PropTypes.func,
 
 }
 
@@ -41,6 +42,7 @@ Button.defaultProps = {
     label: '',
     icon: null,
     btnClassNames: '',
+    onClick: () => {},
 }
 
 export default Button
